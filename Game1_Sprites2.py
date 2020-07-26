@@ -16,7 +16,8 @@ class Characters(object):
 		self.width = width
 		self.height = height		
 		self.color = color
-
+		
+		#Game Attributes
 		self.bullets=[]
 		self.cooldown = 0
 		self.invul = 0 
@@ -45,7 +46,6 @@ class Characters(object):
 								'Right': {'Hit': 27, 'Attack': 19, 'Walk':6},
 								'Up Right': {'Hit': 28, 'Attack': 21, 'Walk':9},
 								}
-
 	def frames(self):
 		if self.walk or self.attack:
 			self.frame += 0.25 
@@ -71,9 +71,7 @@ class Characters(object):
 			self.flip = 1
 		else:
 			self.flip = 0
-
-		print(self.frame)
-
+			
 class Enemies(object):
 	def __init__(self,x,y, width, height, color):
 		self.x = x
